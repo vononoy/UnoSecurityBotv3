@@ -34,7 +34,7 @@ from ._help import _main_help_menu
 
 # ================================================#
 
-TLINK = INLINE_PIC or "https://telegra.ph/file/74d6259983e0642923fdb.jpg"
+TLINK = INLINE_PIC or "https://telegra.ph/file/91afabed76c41bf294f05.png"
 helps = get_string("inline_1")
 
 add_ons = udB.get_key("ADDONS")
@@ -53,8 +53,8 @@ upage = 0
 
 SUP_BUTTONS = [
     [
-        Button.url("• Repo •", url="https://github.com/TeamUltroid/Ultroid"),
-        Button.url("• Support •", url="t.me/UltroidSupport"),
+        Button.url("• Repo •", url="https://github.com/vononoy/UnoSecurityBotv2"),
+        Button.url("• Support •", url="t.me/unomabait"),
     ],
 ]
 
@@ -63,9 +63,9 @@ SUP_BUTTONS = [
 
 @in_pattern(owner=True, func=lambda x: not x.text)
 async def inline_alive(o):
-    MSG = "• **Ultroid Userbot •**"
+    MSG = "• **VonSec Userbot •**"
     WEB0 = InputWebDocument(
-        "https://telegra.ph/file/acd4f5d61369f74c5e7a7.jpg", 0, "image/jpg", []
+        "https://telegra.ph/file/91afabed76c41bf294f05.png", 0, "image/jpg", []
     )
     RES = [
         await o.builder.article(
@@ -73,7 +73,7 @@ async def inline_alive(o):
             text=MSG,
             include_media=True,
             buttons=SUP_BUTTONS,
-            title="Ultroid Userbot",
+            title="VonSec Userbot",
             description="Userbot | Telethon",
             url=TLINK,
             thumb=WEB0,
@@ -84,7 +84,7 @@ async def inline_alive(o):
         RES,
         private=True,
         cache_time=300,
-        switch_pm="👥 ULTROID PORTAL",
+        switch_pm="👥 VONSEC PORTAL",
         switch_pm_param="start",
     )
 
@@ -109,7 +109,7 @@ async def inline_handler(event):
         )
     else:
         result = await event.builder.article(
-            title="Ultroid Help Menu", text=text, buttons=_main_help_menu
+            title="VonSec Help Menu", text=text, buttons=_main_help_menu
         )
     await event.answer([result], private=True, cache_time=300, gallery=True)
 
@@ -199,7 +199,7 @@ async def uptd_plugin(event):
                 help_ += "\n"
     if not help_:
         help_ = f"{file} has no Detailed Help!"
-    help_ += "\n© @TeamUltroid"
+    help_ += "\n© @unomabait"
     buttons = []
     if INLINE_PIC:
         data = f"sndplug_{key}_{file}"
@@ -283,11 +283,11 @@ async def _(event):
 InPlugin = {
     "Pʟᴀʏ Sᴛᴏʀᴇ Aᴘᴘs": "app telegram",
     "Mᴏᴅᴅᴇᴅ Aᴘᴘs": "mods minecraft",
-    "Sᴇᴀʀᴄʜ Oɴ Gᴏᴏɢʟᴇ": "go TeamUltroid",
+    "Sᴇᴀʀᴄʜ Oɴ Gᴏᴏɢʟᴇ": "go @unomabait",
     "Search on XDA": "xda telegram",
     "WʜɪSᴘᴇʀ": "wspr @username Hello🎉",
     "YᴏᴜTᴜʙᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ": "yt Ed Sheeran Perfect",
-    "Piston Eval": "run javascript console.log('Hello Ultroid')",
+    "Piston Eval": "run javascript console.log('Hello VonSec')",
     "OʀᴀɴɢᴇFᴏx🦊": "ofox beryllium",
     "Tᴡɪᴛᴛᴇʀ Usᴇʀ": "twitter theultroid",
     "Kᴏᴏ Sᴇᴀʀᴄʜ": "koo @__kumar__amit",
@@ -420,9 +420,9 @@ async def ibuild(e):
                     results = [
                         await builder.document(
                             _pic,
-                            title="Ultroid Op",
+                            title="VonSec Op",
                             text=txt,
-                            description="@TheUltroid",
+                            description="@unomabait",
                             buttons=btn,
                             link_preview=False,
                         )
@@ -435,10 +435,10 @@ async def ibuild(e):
                     cont = InputWebDocument(pic, 0, mime_type, [])
                 results = [
                     await builder.article(
-                        title="Ultroid Op",
+                        title="VonSec Op",
                         type=_type,
                         text=txt,
-                        description="@TeamUltroid",
+                        description="@unomabait",
                         include_media=include_media,
                         buttons=btn,
                         thumb=cont,
@@ -450,7 +450,7 @@ async def ibuild(e):
         except Exception as er:
             LOGS.exception(er)
     result = [
-        await builder.article("Ultroid Op", text=txt, link_preview=False, buttons=btn)
+        await builder.article("VonSec Op", text=txt, link_preview=False, buttons=btn)
     ]
     await e.answer(result)
 
