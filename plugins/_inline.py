@@ -65,7 +65,7 @@ SUP_BUTTONS = [
 async def inline_alive(o):
     MSG = "• **VonSec Userbot •**"
     WEB0 = InputWebDocument(
-        "https://telegra.ph/file/91afabed76c41bf294f05.png", 0, "image/jpg", []
+        "https://telegra.ph/file/ae09172613c0765342aca.jpg", 0, "image/jpg", []
     )
     RES = [
         await o.builder.article(
@@ -73,7 +73,7 @@ async def inline_alive(o):
             text=MSG,
             include_media=True,
             buttons=SUP_BUTTONS,
-            title="VonSec Userbot",
+            title="Ultroid Userbot",
             description="Userbot | Telethon",
             url=TLINK,
             thumb=WEB0,
@@ -84,7 +84,7 @@ async def inline_alive(o):
         RES,
         private=True,
         cache_time=300,
-        switch_pm="👥 VONSEC PORTAL",
+        switch_pm="👥 ULTROID PORTAL",
         switch_pm_param="start",
     )
 
@@ -109,7 +109,7 @@ async def inline_handler(event):
         )
     else:
         result = await event.builder.article(
-            title="VonSec Help Menu", text=text, buttons=_main_help_menu
+            title="Ultroid Help Menu", text=text, buttons=_main_help_menu
         )
     await event.answer([result], private=True, cache_time=300, gallery=True)
 
@@ -199,7 +199,7 @@ async def uptd_plugin(event):
                 help_ += "\n"
     if not help_:
         help_ = f"{file} has no Detailed Help!"
-    help_ += "\n© @unomabait"
+    help_ += "\n© @TeamUltroid"
     buttons = []
     if INLINE_PIC:
         data = f"sndplug_{key}_{file}"
@@ -283,11 +283,11 @@ async def _(event):
 InPlugin = {
     "Pʟᴀʏ Sᴛᴏʀᴇ Aᴘᴘs": "app telegram",
     "Mᴏᴅᴅᴇᴅ Aᴘᴘs": "mods minecraft",
-    "Sᴇᴀʀᴄʜ Oɴ Gᴏᴏɢʟᴇ": "go @unomabait",
+    "Sᴇᴀʀᴄʜ Oɴ Gᴏᴏɢʟᴇ": "go TeamUltroid",
     "Search on XDA": "xda telegram",
     "WʜɪSᴘᴇʀ": "wspr @username Hello🎉",
     "YᴏᴜTᴜʙᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ": "yt Ed Sheeran Perfect",
-    "Piston Eval": "run javascript console.log('Hello VonSec')",
+    "Piston Eval": "run javascript console.log('Hello Ultroid')",
     "OʀᴀɴɢᴇFᴏx🦊": "ofox beryllium",
     "Tᴡɪᴛᴛᴇʀ Usᴇʀ": "twitter theultroid",
     "Kᴏᴏ Sᴇᴀʀᴄʜ": "koo @__kumar__amit",
@@ -420,9 +420,9 @@ async def ibuild(e):
                     results = [
                         await builder.document(
                             _pic,
-                            title="VonSec Op",
+                            title="Ultroid Op",
                             text=txt,
-                            description="@unomabait",
+                            description="@TheUltroid",
                             buttons=btn,
                             link_preview=False,
                         )
@@ -435,10 +435,10 @@ async def ibuild(e):
                     cont = InputWebDocument(pic, 0, mime_type, [])
                 results = [
                     await builder.article(
-                        title="VonSec Op",
+                        title="Ultroid Op",
                         type=_type,
                         text=txt,
-                        description="@unomabait",
+                        description="@TeamUltroid",
                         include_media=include_media,
                         buttons=btn,
                         thumb=cont,
@@ -450,7 +450,7 @@ async def ibuild(e):
         except Exception as er:
             LOGS.exception(er)
     result = [
-        await builder.article("VonSec Op", text=txt, link_preview=False, buttons=btn)
+        await builder.article("Ultroid Op", text=txt, link_preview=False, buttons=btn)
     ]
     await e.answer(result)
 
